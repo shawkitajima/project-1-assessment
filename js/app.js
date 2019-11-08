@@ -12,7 +12,8 @@ subtractbutton.addEventListener('click', subtractor);
 /*----- functions -----*/
 
 function init() {
-    counter = 0;
+    counter = 0
+    inputBar.value = 1;
     render();
 }
 
@@ -23,15 +24,14 @@ function render() {
     if (counter < 0) document.querySelector('h1').style.color = 'red';
 }
 function adder() {
-    if (isNaN(inputBar.value)) return;
-    counter = +inputBar.value;
+    if (isNaN(parseInt(inputBar.value))) return;
+    counter = counter + parseInt(inputBar.value);
     render()
-
 }
 
 function subtractor() {
-    if (isNaN(inputBar.value)) return;
-    counter = +inputBar.value;
+    if (isNaN(parseInt(inputBar.value))) return;
+    counter = counter  - parseInt(inputBar.value);
     render()
 }
 
